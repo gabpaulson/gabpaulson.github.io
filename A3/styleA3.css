@@ -1,0 +1,65 @@
+@charset "UTF-8";
+/* CSS Document */
+
+html, body
+{
+  background-image: url(../Images/forest-view1.jpg);
+  background-size: 100%;
+}
+
+body {
+	font-family: Verdana, Geneva, sans-serif;
+  font-size: 100%;
+	width: 80%;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 2.5% 2.5% 0;
+	background: rgb(255, 249, 249);
+  line-height: 1.1;
+}
+h1, h2, h3, h4, h5, h6{
+  color: rgb(219, 80, 38);
+}
+#hot{
+  color: rgb(221, 13, 6);
+}
+p{
+  font-size: 80%;
+}
+#name{
+  color: rgb(214, 127, 100);
+}
+img {
+  /*float:left;*/
+  width:90%;
+  background-color: whitesmoke;
+}
+#headerImg {
+  width:25%;
+  border-radius: 50%;
+}
+.sectionText{
+  float: left;
+
+}
+section {
+  border-width: 2px;
+  border-style: double;
+  border-color: gray;
+	padding: 15px 15px 0;
+  margin: 16px;
+}
+article{
+  padding-bottom: 15px;
+}
+aside{
+  border-style: dashed;
+  border-width: 1px;
+  border-color: red;
+  padding-left: 15px;
+  padding-right: 10px;
+  margin-bottom: 10px;
+}
+footer{
+  padding-bottom: 10px;
+}
