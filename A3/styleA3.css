@@ -3,7 +3,7 @@
 
 html, body
 {
-  background-image: url(../Images/forest-view1.jpg);
+  background-image: url(Images/forest-view1.jpg);
   background-size: 100%;
 }
 
@@ -31,11 +31,11 @@ p{
 }
 img {
   /*float:left;*/
-  width:90%;
+  width:90em;
   background-color: whitesmoke;
 }
 #headerImg {
-  width:25%;
+  width:25em;
   border-radius: 50%;
 }
 .sectionText{
