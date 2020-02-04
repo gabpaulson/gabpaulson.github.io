@@ -31,11 +31,11 @@ p{
 }
 img {
   /*float:left;*/
-  width:90em;
+  width:90%;
   background-color: whitesmoke;
 }
 #headerImg {
-  width:25em;
+  width:25%;
   border-radius: 50%;
 }
 .sectionText{
