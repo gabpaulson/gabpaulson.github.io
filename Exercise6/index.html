@@ -23,7 +23,7 @@
 			padding-top: 60px;
             margin-top:50x;
 			font-size: 1.1em;
-			color: #476A98;
+			color: rgb(80, 27, 3);
 		}
 	</style>
 
@@ -77,8 +77,9 @@
 	
 	<script>
         
-        /* uses function expression representation */
+        //setting the function as a variable
         var libsMaddening = function() {
+            //getting the values from the form inputs
             var beverage1 = document.getElementById("bev1").value;
             var noun1 = document.getElementById("n1").value;
             var quality1 = document.getElementById("q1").value;
@@ -90,11 +91,15 @@
 
             var btn = document.getElementById("btn");
             var output = document.getElementById("output");
-
+            
+            //creating the story
             var userInput = "\"Lastly, "+beverage1+"--unless one is drinking it in the Russian style--should be drunk WITHOUT "+noun1+". I know very well that I am in a minority here. But still, how can you call yourself a true "+beverage1+"-lover if you destroy the "+quality1+" of your "+beverage1+" by putting "+noun1+" in it? It would be equally reasonable to put in "+noun2+" or "+noun3+". Really, "+beverage1+" is meant to be "+adj1+", just as "+beverage2+" is meant to be "+adj1+". If you sweeten it, you are no longer tasting the "+beverage1+", you are merely tasting the "+noun1+"; you could make a very similar drink by dissolving "+noun1+" in plain hot "+beverage3+".\" ― George Orwell, A nice cup of "+beverage1;
+
+            //writing the story
             document.getElementById("story").innerHTML = userInput;
         };
         
+        //button trigger
         btn.onclick = libsMaddening;
     </script>
 </body>
