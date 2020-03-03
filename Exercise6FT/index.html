@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>E6: Fortune Teller</title>
+    </head>
+    <body>
+
+<!--Fortune Teller Game / Magic 8 Ball Game
+
+This an exercise where we will practice random number generation, form input, and conditionals.  
+
+Trigger a function from a button
+Generate a random number
+Evaluate the random numbers with a conditional - you may use switch/case or If/else.
+Return a prediction based on the random number
+
+Description:
+This will work similar to a Magic 8 Ball. The user should click a button that triggers a function. The function will generate at least 6 random options that will let the user know the answer to their question. The layout of the page requires a text input field, a submit button, and area to display output text for the user. Note that the input text field can be a dummy input field as it doesn't need to do anything. For this one  you can just upload the html file and the js file or link to your website. -->
+
+        <div id="wrapper">
+            <h1>Magic 8 ball tells the future for all</h1>
+            <label for="input1">Ask your burning question:
+            <input type="text" name="input1" id="question" value=""></label>
+            
+            <br>
+
+            <div>
+                <label for="submitButton">
+                <input type="button" name="submitButton" value="Shakey shake" id="btn"></label> 
+            </div>
+
+            <p id="output"></p>
+        </div>
+
+        <script>
+        // Declare the variables
+        var msg = [ 
+                    "Yes.",
+                    "You will survive the coronavirus, but that is the least of your worries.",
+                    "You win a box of face masks.",
+                    "Again, yes.",
+                    "I think I'm coming down with something, please ask again later.",
+                    "Corona beer sales will continue to plummet, unless you donate now.", 
+                ];
+        
+        var answerQuestion = function(){
+            if(document.getElementById("question").value != "Will I get the coronavirus?")
+            {
+                document.getElementById("output").textContent = "At this time, you can only ask: Will I get the coronavirus?";
+            }
+            else{
+                var rnd = Math.floor( Math.random() * msg.length);
+                document.getElementById("output").textContent = msg[ rnd ];
+                document.getElementById("question").value = "Will I get the coronavirus?";
+            }   
+        };
+
+        btn.onclick = answerQuestion;
+        </script>
+    </body>
+</html>
