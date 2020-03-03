@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>E6: Fortune Teller</title>
+    </head>
+    <body>
+
+<!--Fortune Teller Game / Magic 8 Ball Game
+
+This an exercise where we will practice random number generation, form input, and conditionals.  
+
+Trigger a function from a button
+Generate a random number
+Evaluate the random numbers with a conditional - you may use switch/case or If/else.
+Return a prediction based on the random number
+
+Description:
+This will work similar to a Magic 8 Ball. The user should click a button that triggers a function. The function will generate at least 6 random options that will let the user know the answer to their question. The layout of the page requires a text input field, a submit button, and area to display output text for the user. Note that the input text field can be a dummy input field as it doesn't need to do anything. For this one  you can just upload the html file and the js file or link to your website. -->
+
+        <div id="wrapper">
+            <h1>Magic Rach ball knows all</h1>
+            <label for="input1">Ask your burning question:
+            <input type="text" name="input1" id="question" value=""></label>
+            
+            <br>
+
+            <div>
+                <label for="submitButton">
+                <input type="button" name="submitButton" value="Shakey shake" id="btn"></label> 
+            </div>
+
+            <p id="output"></p>
+        </div>
+
+        <script>
+        // Declare the variables
+        var msg = [ 
+                    "Don't get your socks wet.",
+                    "Feel the response you want to achieve.",
+                    "You never put your towel away correctly.",
+                    "The next person you meet will have an experience.",
+                    "Giant marbles.",
+                    "Chase your dreams, but remember all you leave behind is footprints in the sand.", 
+                    "Don't think in that tone of voice.",
+                    "Try looking at it from a different perspective, such as 45 degrees to the right.",
+                    "Why does one choose toast over bread?",
+                    "Accomplish today what you will forget to do tomorrow.",
+                    "We are all fools. Some of us are simply fools in several ways and it makes us seem complex.",
+                    "Look at it until you hate it. Then, look at it until it is beautiful. Then, look at something in the distance for your eyesight.",
+                    "Try singing about it. Then your true friends will reveal themselves and tell you to shut up.",
+                    "Have you tried being kind?",
+                    "Your parents were right, but not in the way you want.",
+                    "Toast is underrated. Try toast today.",
+                    "Channel your inner Goth. Fight the Roman Empire.",
+                    "You will be fine. Unfortunately.",
+                ];
+        
+        var answerQuestion = function(){
+            if(document.getElementById("question").value.length == 0)
+            {
+                document.getElementById("output").textContent = "You moustache a question";
+            }
+            else{
+                var rnd = Math.floor( Math.random() * msg.length);
+                document.getElementById("output").textContent = msg[ rnd ];
+                document.getElementById("question").value = null;
+            }   
+        };
+
+        btn.onclick = answerQuestion;
+        </script>
+    </body>
+</html>
