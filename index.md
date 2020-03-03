@@ -11,6 +11,7 @@
 		<li><a href="Exercise5/index.html">Exercise 5: Mad Lib</a></li>
 		<li><a href="Exercise6/index.html">Exercise 6: Mad Lib part 2</a></li>
 		<li><a href="Exercise6FT/index.html">Exercise 6: Magic 8 Ball</a></li>
+		<li><a href="MagicRachBall/index.html">Magic Rach Ball</a></li>
    	</ul>
 </body>
 </html>
