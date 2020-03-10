@@ -26,11 +26,17 @@ console.log(abc.length); // → 3
 
 The reason to do this three times is to use a for loop, a while loop, and a do while loop. This will need to be three different sections of your Javascript code. This will help to see how of these loops function differently.  -->
     <body>
+        <h2>JavaScript Do/While Loop</h2><p id="example"></p>
         
-
-
         <script>
-        
+            var i, j;
+            for(i=1; i <= 9; i++) {
+               //inner loop
+              for(j=1; j<=i; j++) {
+                 document.write('#');
+            }
+            document.write('<br/>');
+         }
         </script>
     </body>
 </html>
