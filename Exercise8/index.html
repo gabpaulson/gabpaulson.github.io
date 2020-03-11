@@ -11,8 +11,21 @@ The HTML Page will have a button  on it. When the user presses the button it wil
 -->
     <body>
         <h2>Fizz Buzz</h2>
+        <p id="example"></p>
         
-        <script>
+        <script>        
+        var userOutput = ""
+        var i = 0;
+        
+        do {
+            userOutput += "<br>" + i;
+            i++;
+            }
+        while (i <= 100);
+        
+        document.getElementById("example").innerHTML = userOutput;
+        
+        </script>
             
         </script>
     </body>
