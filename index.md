@@ -14,7 +14,7 @@
 		<li><a href="Exercise7/index.html">Exercise 7: Javascript Loops</a></li>
 		<li><a href="Exercise8/index.html">Exercise 8: Fizz Buzz</a></li>
 		<li><a href="MagicRachBall/index.html">Magic Rach Ball</a></li>
-		<li><a href="DiceGame/Throw.html">Magic Rach Ball</a></li>
+		<li><a href="DiceGame/Throw.html">Dice Game</a></li>
    	</ul>
 </body>
 </html>
