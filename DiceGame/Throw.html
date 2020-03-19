@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Dice Roll</title>
+<style>
+    img{
+        margin:auto;
+        display: block;
+        width: 10%;
+    }
+    input{
+        margin:auto;
+        display: block;
+    }
+    div > p{
+        margin:auto;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: bold;
+        width:25%;
+    }
+    #winLose{
+        color: red;
+    }
+</style>
+</head>
+
+<body>
+        <div>
+            <img src="images/placeholder1.png" id="mydice1">
+        </div>   
+        <br>  
+        <div>
+            <img src="images/placeholder2.png" id="mydice2">
+        </div>
+        <br>
+        <div>
+            <input type="button" value="Throw dice!" id="btn">
+        </div>
+        <br>
+        <div>
+            <p id="winLose"></p>
+            <p id="score"></p>
+        </div>
+
+
+    <script>
+    //Gabrielle Paulson 3-18-20
+    //create the array
+    var diceFace1=new Array("images/d1.png", "images/d2.png", "images/d3.png", "images/d4.png", "images/d5.png", "images/d6.png"); 
+    var diceFace2=new Array("images/d1.png", "images/d2.png", "images/d3.png", "images/d4.png", "images/d5.png", "images/d6.png"); 
+
+    //reference the image
+    var imageName1=document.querySelector("#mydice1");
+    var imageName2=document.querySelector("#mydice2");
+
+    var scoreCount = 0
+    
+    var throwDice = function throwdice(){
+    //create a random integer between 0 and 5
+    var randomdice1=Math.floor(Math.random()*6);
+    var randomdice2=Math.floor(Math.random()*6);
+
+    var idScore = document.getElementById("score");
+    var idWinLose = document.getElementById("winLose");
+    
+    //clear the winlose p
+    idWinLose.innerHTML = " "
+
+    //check that they've rolled different numbers
+    if (randomdice1 !== randomdice2){
+        
+        //change the images
+        imageName1.src=diceFace1[randomdice1];
+        imageName2.src=diceFace2[randomdice2];
+       
+        //wins 
+        if(randomdice1+randomdice2==11 || randomdice1+randomdice2==7){
+            idWinLose.innerHTML = "You Won!"
+            scoreCount += 1;
+            idScore.innerHTML = "Your score: " + scoreCount;
+        }
+        //wins 
+        if(randomdice1+randomdice2==2){
+            idWinLose.innerHTML = "You LOST! Haha loser"
+            scoreCount -= 1;
+            idScore.innerHTML = "Your score: " + scoreCount;
+        }
+    } else {
+        throwdice()
+    }
+   
+    }
+    btn.onclick = throwDice;
+    </script>
+</body>
+    
+</html>
